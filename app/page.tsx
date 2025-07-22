@@ -9,14 +9,32 @@ import Link from 'next/link';
 
 const Hero = () => (
     <div className="relative bg-white overflow-hidden isolate">
+        {/* Imagen de fondo */}
+        <div className="absolute inset-0 z-0">
+            <Image
+                src="/base_Mesa de trabajo 1.png" // Asegúrate de colocar la imagen en la carpeta public
+                alt="Fondo decorativo iKids"
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+                className="opacity-90" // Ajusta la opacidad según necesites
+            />
+        </div>
+        
+        {/* Efecto de superposición para mejorar legibilidad */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/30 z-0"></div>
+
         <div className="container mx-auto px-6 py-24 md:py-32 text-center relative z-10">
             <AnimatedSection>
                 <h1 className="text-5xl md:text-7xl font-bold text-pink-500 mb-6 leading-tight">
                     {"Donde la Aventura de Aprender Comienza".split(" ").map((word, index) => (
                         <span
                             key={index}
-                            className="inline-block animate-fade-in-up"
-                            style={{ animationDelay: `${index * 0.15}s` }}
+                            className="inline-block animate-fade-in-up hover:scale-110 transition-transform duration-300"
+                            style={{ 
+                                animationDelay: `${index * 0.1}s`,
+                                display: 'inline-block' // Asegura que la animación funcione correctamente
+                            }}
                         >
                             {word}&nbsp;
                         </span>
@@ -24,7 +42,7 @@ const Hero = () => (
                 </h1>
             </AnimatedSection>
             <AnimatedSection delay="duration-1000">
-                <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10">
+                <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-10 relative bg-white/10 backdrop-blur-sm py-2 px-4 rounded-lg">
                     En <strong className="text-blue-400">iKids</strong>, creemos en un aprendizaje lúdico y lleno de cariño para desarrollar el máximo potencial de cada niño.
                 </p>
             </AnimatedSection>
@@ -46,15 +64,17 @@ const Hero = () => (
             </AnimatedSection>
         </div>
 
-        {/* Blobs animados con tonos pastel */}
+        {/* Blobs animados con tonos pastel (modificados para que funcionen con la imagen de fondo) */}
         <div className="absolute inset-0 z-0" aria-hidden="true">
-            <div className="absolute top-0 -left-16 w-72 h-72 bg-blue-100 rounded-full opacity-40 blur-3xl animate-float"></div>
-            <div className="absolute top-1/3 right-0 w-80 h-80 bg-pink-100 rounded-full opacity-40 blur-2xl animate-float-reverse"></div>
-            <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-yellow-100 rounded-full opacity-40 blur-2xl animate-float"></div>
-            <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-green-100 rounded-full opacity-30 blur-xl animate-float-reverse"></div>
+            <div className="absolute top-0 -left-16 w-72 h-72 bg-blue-100 rounded-full opacity-20 blur-3xl animate-float"></div>
+            <div className="absolute top-1/3 right-0 w-80 h-80 bg-pink-100 rounded-full opacity-20 blur-2xl animate-float-reverse"></div>
+            <div className="absolute bottom-0 left-1/4 w-60 h-60 bg-yellow-100 rounded-full opacity-20 blur-2xl animate-float"></div>
+            <div className="absolute bottom-1/4 right-1/3 w-48 h-48 bg-green-100 rounded-full opacity-15 blur-xl animate-float-reverse"></div>
         </div>
     </div>
 );
+
+
 
 const Reviews = () => (
     <section className="py-20 bg-sky-50">

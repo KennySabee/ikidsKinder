@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { MenuIcon, CloseIcon } from './icons'
 import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
 
 const navLinks = [
   { name: 'Inicio', path: '/' },
@@ -44,52 +45,62 @@ const Header: React.FC = () => {
           isScrolled ? 'bg-white shadow-md' : 'bg-white'
         }`}
       >
-        <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-          {/* Logo animado */}
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <Link href="/" className="text-4xl font-heading tracking-wider">
-              <span className="text-pink-400">i</span>
-              <span className="text-yellow-400">K</span>
-              <span className="text-blue-400">i</span>
-              <span className="text-green-400">d</span>
-              <span className="text-purple-400">s</span>
-            </Link>
-          </motion.div>
+        {/* Contenedor con ancho máximo */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="flex justify-between items-center">
+            {/* Logo reducido */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/LOGO IKIDS.png"
+                  alt="iKids Kinder Garden"
+                  width={120} // Tamaño reducido
+                  height={40} // Tamaño reducido
+                  className="h-auto object-contain"
+                  priority
+                />
+              </Link>
+            </motion.div>
 
-          {/* Desktop */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link, i) => (
-              <motion.div
-                key={link.name}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + i * 0.1 }}
-              >
-                <Link
-                  href={link.path}
-                  className={`text-lg font-semibold transition-colors duration-300 ${
-                    isActive(link.path)
-                      ? 'text-pink-500 font-bold'
-                      : 'text-gray-600 hover:text-pink-400'
-                  }`}
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-6">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + i * 0.1 }}
                 >
-                  {link.name}
-                </Link>
-              </motion.div>
-            ))}
-          </div>
+                  <Link
+                    href={link.path}
+                    className={`text-base font-medium transition-colors duration-300 ${
+                      isActive(link.path)
+                        ? 'text-pink-500 font-semibold'
+                        : 'text-gray-600 hover:text-pink-400'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(true)} className="text-pink-500" aria-label="Abrir menú">
-              <MenuIcon className="w-8 h-8" />
-            </button>
-          </div>
-        </nav>
+            {/* Mobile menu button */}
+            <div className="md:hidden">
+              <button 
+                onClick={() => setIsOpen(true)} 
+                className="text-pink-500"
+                aria-label="Abrir menú"
+              >
+                <MenuIcon className="w-6 h-6" />
+              </button>
+            </div>
+          </nav>
+        </div>
       </motion.header>
 
       {/* Mobile menu */}
@@ -108,23 +119,28 @@ const Header: React.FC = () => {
               exit={{ x: '-100%' }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
             >
-              <div className="flex justify-between items-center p-6 border-b border-pink-100">
+              <div className="flex justify-between items-center p-4 border-b border-pink-100">
                 <Link
                   href="/"
                   onClick={() => setIsOpen(false)}
-                  className="text-4xl font-heading tracking-wider"
+                  className="flex items-center"
                 >
-                  <span className="text-pink-400">i</span>
-                  <span className="text-yellow-400">K</span>
-                  <span className="text-blue-400">i</span>
-                  <span className="text-green-400">d</span>
-                  <span className="text-purple-400">s</span>
+                  <Image
+                    src="/LOGO IKIDS.png"
+                    alt="iKids Kinder Garden"
+                    width={100} // Tamaño más pequeño para móvil
+                    height={35}
+                    className="h-auto object-contain"
+                  />
                 </Link>
-                <button onClick={() => setIsOpen(false)} aria-label="Cerrar menú">
-                  <CloseIcon className="w-8 h-8 text-pink-500" />
+                <button 
+                  onClick={() => setIsOpen(false)} 
+                  aria-label="Cerrar menú"
+                >
+                  <CloseIcon className="w-6 h-6 text-pink-500" />
                 </button>
               </div>
-              <div className="flex flex-col items-center justify-center flex-grow space-y-8">
+              <div className="flex flex-col items-center justify-center flex-grow space-y-6">
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.name}
@@ -135,9 +151,9 @@ const Header: React.FC = () => {
                     <Link
                       href={link.path}
                       onClick={() => setIsOpen(false)}
-                      className={`text-3xl font-heading ${
+                      className={`text-xl font-medium ${
                         isActive(link.path)
-                          ? 'text-pink-500 font-bold'
+                          ? 'text-pink-500 font-semibold'
                           : 'text-gray-700 hover:text-pink-400'
                       }`}
                     >
