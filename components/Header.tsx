@@ -42,12 +42,12 @@ const Header: React.FC = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white shadow-md' : 'bg-white'
-        }`}
+          isScrolled ? 'bg-white shadow-md' : 'bg-yellow-50'
+        } backdrop-blur-sm`}
       >
         {/* Contenedor con ancho máximo */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex justify-between items-center">
+          <nav className="flex justify-between items-center h-16 md:h-20">
             {/* Logo */}
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -58,16 +58,16 @@ const Header: React.FC = () => {
                 <Image
                   src="/LOGO IKIDS.png"
                   alt="iKids Kinder Garden"
-                  width={120}
-                  height={40}
-                  className="h-auto object-contain"
+                  width={150}
+                  height={60}
+                  className="h-auto object-contain w-auto max-w-[150px]"
                   priority
                 />
               </Link>
             </motion.div>
 
             {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center space-x-6">
+            <div className="hidden md:flex items-center space-x-1">
               {navLinks.map((link, i) => (
                 <motion.div
                   key={link.name}
@@ -77,10 +77,10 @@ const Header: React.FC = () => {
                 >
                   <Link
                     href={link.path}
-                    className={`text-base font-medium transition-colors duration-300 ${
+                    className={`px-4 py-2 rounded-full text-base font-bold transition-all duration-300 ${
                       isActive(link.path)
-                        ? 'text-yellow-500 font-semibold'
-                        : 'text-gray-600 hover:text-yellow-400'
+                        ? 'bg-yellow-300 text-black shadow-sm'
+                        : 'text-black hover:bg-yellow-200 hover:text-black'
                     }`}
                   >
                     {link.name}
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
             <div className="md:hidden">
               <button 
                 onClick={() => setIsOpen(true)} 
-                className="text-yellow-500"
+                className="text-black bg-yellow-300 p-2 rounded-full shadow-sm hover:bg-yellow-400 transition-colors"
                 aria-label="Abrir menú"
               >
                 <MenuIcon className="w-6 h-6" />
@@ -113,13 +113,13 @@ const Header: React.FC = () => {
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="fixed top-0 left-0 w-full h-screen bg-yellow-50 flex flex-col"
+              className="fixed top-0 left-0 w-full h-screen bg-gradient-to-b from-white to-yellow-50 flex flex-col"
               initial={{ x: '-100%' }}
               animate={{ x: 0 }}
               exit={{ x: '-100%' }}
               transition={{ duration: 0.3, ease: 'easeInOut' }}
             >
-              <div className="flex justify-between items-center p-4 border-b border-yellow-100">
+              <div className="flex justify-between items-center p-4 bg-white">
                 <Link
                   href="/"
                   onClick={() => setIsOpen(false)}
@@ -128,19 +128,20 @@ const Header: React.FC = () => {
                   <Image
                     src="/LOGO IKIDS.png"
                     alt="iKids Kinder Garden"
-                    width={100}
-                    height={35}
-                    className="h-auto object-contain"
+                    width={120}
+                    height={40}
+                    className="h-auto object-contain w-auto"
                   />
                 </Link>
                 <button 
                   onClick={() => setIsOpen(false)} 
                   aria-label="Cerrar menú"
+                  className="text-black bg-yellow-300 p-2 rounded-full hover:bg-yellow-400 transition-colors"
                 >
-                  <CloseIcon className="w-6 h-6 text-yellow-500" />
+                  <CloseIcon className="w-6 h-6" />
                 </button>
               </div>
-              <div className="flex flex-col items-center justify-center flex-grow space-y-6">
+              <div className="flex flex-col items-center justify-center flex-grow space-y-6 bg-white bg-opacity-80">
                 {navLinks.map((link, i) => (
                   <motion.div
                     key={link.name}
@@ -151,10 +152,10 @@ const Header: React.FC = () => {
                     <Link
                       href={link.path}
                       onClick={() => setIsOpen(false)}
-                      className={`text-xl font-medium ${
+                      className={`px-8 py-4 rounded-full text-xl font-bold transition-all duration-300 ${
                         isActive(link.path)
-                          ? 'text-yellow-500 font-semibold'
-                          : 'text-gray-700 hover:text-yellow-400'
+                          ? 'bg-yellow-300 text-black shadow-sm'
+                          : 'text-black hover:bg-yellow-200 hover:text-black'
                       }`}
                     >
                       {link.name}
