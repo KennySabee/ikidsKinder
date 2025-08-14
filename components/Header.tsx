@@ -42,7 +42,7 @@ const Header: React.FC = () => {
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'bg-white shadow-md' : 'bg-yellow-50'
+          isScrolled ? 'bg-white shadow-md' : 'bg-amarillo-personalizado'
         } backdrop-blur-sm`}
       >
         {/* Contenedor con ancho máximo */}

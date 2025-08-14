@@ -1,8 +1,40 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'KidzTitulo';
+  src: url('/fonts/KidzTitulo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Fuente para subtítulos */
+@font-face {
+  font-family: 'SubtituloFont';
+  src: url('/fonts/Subtitulos.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Fuente para párrafos delgado */
+@font-face {
+  font-family: 'ParrafoDelgado';
+  src: url('/fonts/ParrafoDelgado.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Fuente para párrafos normales */
+@font-face {
+  font-family: 'ParrafoNormal';
+  src: url('/fonts/ParrafoNormal.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-amarillo-personalizado: #F8E633;
 }
 
 @theme inline {
@@ -10,6 +42,44 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
+
+/* Clase para color de fondo personalizado */
+.bg-amarillo-personalizado {
+  background-color: var(--color-amarillo-personalizado);
+}
+
+/* O usando la variable CSS */
+.bg-amarillo-var {
+  background-color: var(--color-amarillo-personalizado);
+}
+
+/* Clases para texto en amarillo */
+.text-amarillo-personalizado {
+  color: var(--color-amarillo-personalizado);
+}
+
+.text-amarillo {
+  color: #F8E633;
+}
+
+/* Aplicar fuentes globalmente por tipo de elemento */
+h1, h2 {
+  font-family: 'KidzTitulo', Arial, Helvetica, sans-serif;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'SubtituloFont', Arial, Helvetica, sans-serif;
+}
+
+/* Párrafos y texto normal */
+body, p, span, div, li, td, th {
+  font-family: 'ParrafoNormal', Arial, Helvetica, sans-serif;
+}
+
+/* Para texto delgado específico */
+.font-delgado {
+  font-family: 'ParrafoDelgado', Arial, Helvetica, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
