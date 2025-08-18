@@ -41,6 +41,21 @@ const Admissions = () => {
 
     return (
         <div className="bg-yellow-50 py-16 md:py-24">
+            {/* Elementos decorativos de fondo */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 text-4xl text-yellow-200 opacity-50">
+          ⭐
+        </div>
+        <div className="absolute top-40 right-20 text-3xl text-yellow-300 opacity-40">
+          🌟
+        </div>
+        <div className="absolute bottom-40 left-20 text-5xl text-yellow-200 opacity-50">
+          ☀️
+        </div>
+        <div className="absolute bottom-20 right-10 text-4xl text-yellow-300 opacity-40">
+          🌻
+        </div>
+      </div>
             <div className="container mx-auto px-6">
                 <AnimatedSection>
                     <h1 className="text-4xl md:text-5xl font-bold text-center text-yellow-700 mb-16">Proceso de Admisión</h1>

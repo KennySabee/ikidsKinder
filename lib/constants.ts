@@ -153,3 +153,148 @@ export const admissionSteps = [
       "Una vez completado el proceso, ¡tu pequeño ya es parte de nuestra gran familia!",
   },
 ];
+
+// Datos para la galería de instalaciones
+export interface GallerySlide {
+  id: number;
+  src: string;
+  alt: string;
+  label: string;
+}
+
+export const gallerySlidesSedeTelegrafo: GallerySlide[] = [
+  {
+    id: 1,
+    src: '/sedes/telegrafo/1.jpg',
+    alt: 'Instalaciones Sede Telégrafo 1',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 2,
+    src: '/sedes/telegrafo/2.jpg',
+    alt: 'Instalaciones Sede Telégrafo 2',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 3,
+    src: '/sedes/telegrafo/3.jpg',
+    alt: 'Instalaciones Sede Telégrafo 3',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 4,
+    src: '/sedes/telegrafo/4.jpg',
+    alt: 'Instalaciones Sede Telégrafo 4',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 5,
+    src: '/sedes/telegrafo/5.jpg',
+    alt: 'Instalaciones Sede Telégrafo 5',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 6,
+    src: '/sedes/telegrafo/6.jpg',
+    alt: 'Instalaciones Sede Telégrafo 6',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 7,
+    src: '/sedes/telegrafo/7.jpg',
+    alt: 'Instalaciones Sede Telégrafo 7',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 8,
+    src: '/sedes/telegrafo/8.jpg',
+    alt: 'Instalaciones Sede Telégrafo 8',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 9,
+    src: '/sedes/telegrafo/9.jpg',
+    alt: 'Instalaciones Sede Telégrafo 9',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 10,
+    src: '/sedes/telegrafo/10.jpg',
+    alt: 'Instalaciones Sede Telégrafo 10',
+    label: 'SEDE TELÉGRAFO'
+  },{
+    id: 11,
+    src: '/sedes/telegrafo/11.jpg',
+    alt: 'Instalaciones Sede Telégrafo 11',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 12,
+    src: '/sedes/telegrafo/12.jpg',
+    alt: 'Instalaciones Sede Telégrafo 12',
+    label: 'SEDE TELÉGRAFO'
+  },
+];
+
+export const gallerySlidesSedeJardin: GallerySlide[] = [
+ {
+    id: 1,
+    src: '/sedes/jardin/1.jpg',
+    alt: 'Instalaciones Sede Jardin 1',
+    label: 'SEDE JARDIN'
+  },
+  {
+    id: 2,
+    src: '/sedes/jardin/2.jpg',
+    alt: 'Instalaciones Sede Jardin 2',
+    label: 'SEDE JARDIN'
+  },
+  {
+    id: 3,
+    src: '/sedes/jardin/3.jpg',
+    alt: 'Instalaciones Sede Jardin 3',
+    label: 'SEDE JARDIN'
+  },
+  {
+    id: 4,
+    src: '/sedes/jardin/4.jpg',
+    alt: 'Instalaciones Sede Jardin 4',
+    label: 'SEDE JARDIN'
+  },
+  {
+    id: 5,
+    src: '/sedes/jardin/5.jpg',
+    alt: 'Instalaciones Sede Jardin 5',
+    label: 'SEDE JARDIN'
+  },
+  {
+    id: 6,
+    src: '/sedes/jardin/6.jpg',
+    alt: 'Instalaciones Sede Jardin 6',
+    label: 'SEDE JARDIN'
+  },
+  {
+    id: 7,
+    src: '/sedes/jardin/7.jpg',
+    alt: 'Instalaciones Sede Jardin 7',
+    label: 'SEDE JARDIN'
+  },
+  {
+    id: 8,
+    src: '/sedes/jardin/8.jpg',
+    alt: 'Instalaciones Sede Jardin 8',
+    label: 'SEDE JARDIN'
+  },
+  {
+    id: 9,
+    src: '/sedes/jardin/9.jpg',
+    alt: 'Instalaciones Sede Jardin 9',
+    label: 'SEDE JARDIN'
+  },
+  {
+    id: 10,
+    src: '/sedes/jardin/10.jpg',
+    alt: 'Instalaciones Sede Jardin 10',
+    label: 'SEDE JARDIN'
+  },
+];

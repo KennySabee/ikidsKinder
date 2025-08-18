@@ -7,6 +7,21 @@ import { AnimatedSection } from '@/components/AnimatedSection';
 const Contact = () => {
     return (
         <section className="py-16 md:py-24 bg-yellow-50">
+            {/* Elementos decorativos de fondo */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 text-4xl text-yellow-200 opacity-50">
+          ⭐
+        </div>
+        <div className="absolute top-40 right-20 text-3xl text-yellow-300 opacity-40">
+          🌟
+        </div>
+        <div className="absolute bottom-40 left-20 text-5xl text-yellow-200 opacity-50">
+          ☀️
+        </div>
+        <div className="absolute bottom-20 right-10 text-4xl text-yellow-300 opacity-40">
+          🌻
+        </div>
+      </div>
             <div className="container mx-auto px-6">
                 <AnimatedSection>
                     <h1 className="text-4xl md:text-5xl font-bold text-center text-yellow-700 mb-16">¡Ponte en Contacto!</h1>
@@ -17,36 +32,38 @@ const Contact = () => {
                     <AnimatedSection className="lg:w-1/3" delay="duration-700">
                         <div className="bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col justify-center space-y-8 border border-yellow-200">
                             <div>
-                                <h3 className="text-2xl font-bold text-yellow-700 mb-4">Sede Principal</h3>
+                                <h3 className="text-2xl font-bold text-yellow-700 mb-4">Sede Telégrafo
+</h3>
                                 <div className="space-y-4">
                                     <p className="flex items-start">
                                         <MapPinIcon className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0 mt-1" />
-                                        <span className="text-slate-700">Calle de la Alegría 123, Ciudad Feliz</span>
+                                        <a href="https://maps.app.goo.gl/bXD5PfMhbV22CVi57" target="_blank" className="text-slate-700 hover:text-yellow-600 transition-colors">Av. Telégrafo y Últimas Noticias</a>
+                                        
                                     </p>
                                     <p className="flex items-center">
                                         <PhoneIcon className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0" />
-                                        <a href="tel:+1234567890" className="text-slate-700 hover:text-yellow-600 transition-colors">(123) 456-7890</a>
+                                        <a href="https://walink.co/6a6b60" target="_blank" className="text-slate-700 hover:text-yellow-600 transition-colors">(+593) 995745004</a>
                                     </p>
                                     <p className="flex items-center">
                                         <MailIcon className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0" />
-                                        <a href="mailto:hola@ikids.com" className="text-slate-700 hover:text-yellow-600 transition-colors">hola@ikids.com</a>
+                                        <a href="mailto:ikids.kindergarden@gmail.com" className="text-slate-700 hover:text-yellow-600 transition-colors">ikids.kindergarden@gmail.com</a>
                                     </p>
                                 </div>
                             </div>
                             <div>
-                                <h3 className="text-2xl font-bold text-yellow-700 mb-4">Sede Campestre</h3>
+                                <h3 className="text-2xl font-bold text-yellow-700 mb-4">Sede Jardin</h3>
                                 <div className="space-y-4">
                                     <p className="flex items-start">
                                         <MapPinIcon className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0 mt-1" />
-                                        <span className="text-slate-700">Avenida del Juego 45, Villa Sonrisa</span>
+                                        <a href="https://maps.app.goo.gl/L8QGwbDY6jyBYQCB8" target="_blank" className="text-slate-700 hover:text-yellow-600 transition-colors">Av. Alemania y Mariana de Jesús</a>
                                     </p>
                                     <p className="flex items-center">
                                         <PhoneIcon className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0" />
-                                        <a href="tel:+1234567891" className="text-slate-700 hover:text-yellow-600 transition-colors">(123) 456-7891</a>
+                                        <a href="https://walink.co/6a6b60" target="_blank" className="text-slate-700 hover:text-yellow-600 transition-colors">(+593) 995745004</a>
                                     </p>
                                     <p className="flex items-center">
                                         <MailIcon className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0" />
-                                        <a href="mailto:campestre@ikids.com" className="text-slate-700 hover:text-yellow-600 transition-colors">campestre@ikids.com</a>
+                                        <a href="mailto:ikids.kindergarden@gmail.com" className="text-slate-700 hover:text-yellow-600 transition-colors">ikids.kindergarden@gmail.com</a>
                                     </p>
                                 </div>
                             </div>
@@ -72,7 +89,7 @@ const Contact = () => {
                             
                             <div className="text-slate-600">
                                 <p className="mb-2">¿Prefieres comunicarte de otra forma?</p>
-                                <p>Llámanos al <a href="tel:+1234567890" className="text-yellow-600 font-medium hover:underline">(123) 456-7890</a></p>
+                                <p>Llámanos al <a href="https://walink.co/6a6b60" target="_blank" className="text-yellow-600 font-medium hover:underline">(+593) 995745004</a></p>
                             </div>
                         </div>
                     </AnimatedSection>

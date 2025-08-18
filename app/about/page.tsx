@@ -32,13 +32,13 @@ const About = () => {
         <AnimatedSection>
           <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl p-8 md:p-12 mb-16 shadow-lg border border-yellow-200 hover:shadow-xl transition-all duration-300">
             <div className="relative w-48 h-48 md:w-64 md:h-64 mb-6 md:mb-0 md:mr-12 group flex-shrink-0">
-              <div className="absolute inset-0 bg-yellow-200 rounded-full animate-pulse opacity-50"></div>
-              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-yellow-300 shadow-lg">
+              <div className="absolute inset-0  rounded-full animate-pulse opacity-50"></div>
+              <div className="relative w-full h-full rounded-full overflow-hidden  ">
                 <Image
-                  src="/rectora.jpg"
+                  src="/rectora.png"
                   alt="Belén, Directora de iKids"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover scale-125 "
                   sizes="(max-width: 768px) 192px, 256px"
                 />
               </div>

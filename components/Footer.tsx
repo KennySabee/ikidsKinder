@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { PhoneIcon, MailIcon, MapPinIcon } from '@/components/icons';
-import { FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 interface NavLink {
   name: string;
@@ -33,24 +33,24 @@ const socialLinks: SocialLink[] = [
   { 
     name: 'Facebook', 
     icon: <FaFacebook className="w-5 h-5" />, 
-    url: '#' 
+    url: 'https://www.facebook.com/share/172BcKSST7/?mibextid=wwXIfr' 
   },
   { 
     name: 'Instagram', 
     icon: <FaInstagram className="w-5 h-5" />, 
-    url: '#' 
+    url: 'https://www.instagram.com/ikids.kindergarden/' 
   },
   { 
-    name: 'YouTube', 
-    icon: <FaYoutube className="w-5 h-5" />, 
-    url: '#' 
+    name: 'TikTok', 
+    icon: <FaTiktok className="w-5 h-5" />, 
+    url: 'https://www.tiktok.com/@ikids.kinder.gard?_t=ZM-8yz7xUQghVw&_r=1' 
   },
 ];
 
 const contactInfo: ContactInfo[] = [
-  { icon: <PhoneIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: '(123) 456-7890' },
-  { icon: <MailIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: 'hola@ikids.com' },
-  { icon: <MapPinIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: 'Calle Falsa 123, Ciudad' },
+  { icon: <PhoneIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: '(+593) 995745004  ' },
+  { icon: <MailIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: 'ikids.kindergarden@gmail.com' },
+  { icon: <MapPinIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: 'Av. Alemania y Mariana de Jesús' },
 ];
 
 export const Footer = () => {

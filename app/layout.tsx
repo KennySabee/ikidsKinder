@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'iKids Guardería',
-  description: 'Donde la aventura de aprender comienza',
+  title: 'iKids Guardería | Educación Infantil de Calidad',
+  description: 'Somos iKids la mejor guardería en Quito, Ecuador. Ofrecemos cuidado infantil profesional, educación temprana y actividades lúdicas para el desarrollo integral de tus hijos.',
+  keywords: "guardería Quito, jardín infantil Quito, cuidado de niños, educación temprana, guardería infantil, iKids Ecuador, centros infantiles Quito"
 };
 
 export default function RootLayout({
