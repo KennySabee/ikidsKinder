@@ -44,8 +44,10 @@ const Services = () => {
                     {services.map((service, index) => (
                         <AnimatedSection key={service.title} delay={`duration-[${500 + index * 100}ms]`}>
                             <div className={`${cardColors[index % cardColors.length]} p-8 rounded-2xl shadow-lg h-full transform hover:-translate-y-2 transition-all duration-300 flex flex-col hover:shadow-xl`}>
+                                <div className="text-4xl mb-4 text-yellow-500">{service.emoji}</div>
+                                
                                 <h3 className="text-2xl font-bold mb-3 font-subtitulo">{service.title}</h3>
-                                <p className="font-delgado mb-4 flex-grow">{service.description}</p>
+                                <p className="font-delgado mb-4 flex-grow text-justify">{service.description}</p>
                                 {service.features && (
                                     <ul className="space-y-2 mt-4">
                                         {service.features.map((feature, i) => (

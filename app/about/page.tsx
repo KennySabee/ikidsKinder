@@ -50,13 +50,13 @@ const About = () => {
               <p className="font-delgado text-lg md:text-xl font-semibold text-yellow-600 mb-6 bg-yellow-100 rounded-full px-6 py-2 inline-block">
                 DIRECTORA 
               </p>
-              <p className="text-base md:text-lg text-slate-700 leading-relaxed bg-yellow-50 p-6 rounded-xl border border-yellow-100">
+              <p className="text-justify text-base md:text-lg text-slate-700 leading-relaxed bg-yellow-50 p-6 rounded-xl border border-yellow-100">
                 " IKIDS, es una Institución de educación pre-primaria, que se
-                encuentra encaTminada en alcanzar la excelencia educativa,
+                encuentra encaminada en alcanzar la excelencia educativa,
                 brindando un entorno amigable y amoroso en el cuidado infantil,
                 basados en el respeto y compromiso de cada uno de los
                 ejecutivos, personal docente y personal administrativo hacia
-                nuestros alum nos. "
+                nuestros alumnos. "
               </p>
             </div>
           </div>
@@ -69,7 +69,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-yellow-700 mb-4">
                 Misión
               </h3>
-              <p className="text-slate-700">
+              <p className="text-slate-700 text-justify">
                 Brindar una educación inicial de alta calidad en un ambiente
                 cálido y estimulante, promoviendo el desarrollo integral de cada
                 niño a través del juego, el afecto y la exploración.
@@ -83,7 +83,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-yellow-700 mb-4">
                 Visión
               </h3>
-              <p className="text-slate-700">
+              <p className="text-slate-700 text-justify">
                 Ser la guardería líder en innovación pedagógica, reconocida por
                 formar niños felices, autónomos, creativos y con sólidos
                 valores, preparados para enfrentar los retos del mañana.
@@ -97,7 +97,7 @@ const About = () => {
               <h3 className="text-2xl font-bold text-yellow-700 mb-4">
                 Filosofía
               </h3>
-              <p className="text-slate-700">
+              <p className="text-slate-700 text-justify">
                 Creemos que cada niño es único. Nuestra filosofía se basa en el
                 respeto a sus ritmos, el fomento de su curiosidad innata y la
                 construcción de un aprendizaje significativo a través de

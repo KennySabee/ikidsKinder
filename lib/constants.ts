@@ -99,30 +99,36 @@ export const services = [
     title: "FULL TIME",
     description: "Horarios flexibles que se ajustan a tus necesitadades.",
     features: ["Planes desde 7:30 am- 16:30pm", "Informes diarios"],
+    emoji: "⏰"
   },
   {
     title: "INSTALACIONES",
     description:
       "Diseñadas para estimular el juego, la seguridad y el aprendizaje en rincón de IKIDS..",
+    emoji: "🏢"
   },
   {
     title: "PERSONAL",
     description: " Docentes y profesionales apasionados, con vocación y formación especializada en desarrollo infantil.",
+    emoji: "👪"
   },
   {
     title: "IDIOMAS",
     description:
       " Desde pequeños aprenden inglés y francés de forma lúdica, estimulando el desarrollo cognitivo y cultural.",
+      emoji: "🌐"
   },
   {
     title: "CÁMARAS",
     description:
       " Accede desde tu celular y observa cada momento de tu peque con total tranquilidad y confianza.",
+      emoji: "📷"
   },
   {
     title: "MEDICINA",
     description:
       " Contamos con revisiones pediátricas periódicas para asegurar el bienestar integral de cada niño.",
+      emoji: "💊"
   },
   
 ];

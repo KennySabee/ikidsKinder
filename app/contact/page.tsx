@@ -6,39 +6,39 @@ import { AnimatedSection } from '@/components/AnimatedSection';
 
 const Contact = () => {
     return (
-        <section className="py-16 md:py-24 bg-yellow-50">
+        <section className="py-16 md:py-24 bg-yellow-50 relative">
             {/* Elementos decorativos de fondo */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 text-4xl text-yellow-200 opacity-50">
-          ⭐
-        </div>
-        <div className="absolute top-40 right-20 text-3xl text-yellow-300 opacity-40">
-          🌟
-        </div>
-        <div className="absolute bottom-40 left-20 text-5xl text-yellow-200 opacity-50">
-          ☀️
-        </div>
-        <div className="absolute bottom-20 right-10 text-4xl text-yellow-300 opacity-40">
-          🌻
-        </div>
-      </div>
-            <div className="container mx-auto px-6">
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-20 left-10 text-4xl text-yellow-200 opacity-50">
+                    ⭐
+                </div>
+                <div className="absolute top-40 right-20 text-3xl text-yellow-300 opacity-40">
+                    🌟
+                </div>
+                <div className="absolute bottom-40 left-20 text-5xl text-yellow-200 opacity-50">
+                    ☀️
+                </div>
+                <div className="absolute bottom-20 right-10 text-4xl text-yellow-300 opacity-40">
+                    🌻
+                </div>
+            </div>
+            
+            <div className="container mx-auto px-6 relative z-10">
                 <AnimatedSection>
                     <h1 className="text-4xl md:text-5xl font-bold text-center text-yellow-700 mb-16">¡Ponte en Contacto!</h1>
                 </AnimatedSection>
 
                 <div className="flex flex-col lg:flex-row gap-10 items-stretch">
-                    {/* Contact Info */}
-                    <AnimatedSection className="lg:w-1/3" delay="duration-700">
+                    {/* Contact Info with Maps */}
+                    <AnimatedSection className="lg:w-1/2" delay="duration-700">
                         <div className="bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col justify-center space-y-8 border border-yellow-200">
+                            {/* Sede Telégrafo */}
                             <div>
-                                <h3 className="text-2xl font-bold text-yellow-700 mb-4">Sede Telégrafo
-</h3>
-                                <div className="space-y-4">
+                                <h3 className="text-2xl font-bold text-yellow-700 mb-4">Sede Telégrafo</h3>
+                                <div className="space-y-4 mb-6">
                                     <p className="flex items-start">
                                         <MapPinIcon className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0 mt-1" />
                                         <a href="https://maps.app.goo.gl/bXD5PfMhbV22CVi57" target="_blank" className="text-slate-700 hover:text-yellow-600 transition-colors">Av. Telégrafo y Últimas Noticias</a>
-                                        
                                     </p>
                                     <p className="flex items-center">
                                         <PhoneIcon className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0" />
@@ -49,10 +49,25 @@ const Contact = () => {
                                         <a href="mailto:ikids.kindergarden@gmail.com" className="text-slate-700 hover:text-yellow-600 transition-colors">ikids.kindergarden@gmail.com</a>
                                     </p>
                                 </div>
+                                
+                                {/* Mapa Sede Telégrafo */}
+                                <div className="rounded-2xl overflow-hidden shadow-lg h-64">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7844444444444!2d-78.4861478!3d-0.1728004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b241f8671fb%3A0x632048b48b9e3d93!2sIKIDS%20%22%2BEl%20Tel%C3%A9grafo%22!5e0!3m2!1ses!2sec!4v1234567890123!5m2!1ses!2sec"
+                                        width="100%"
+                                        height="100%"
+                                        style={{ border: 0 }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
                             </div>
+
+                            {/* Sede Jardín */}
                             <div>
-                                <h3 className="text-2xl font-bold text-yellow-700 mb-4">Sede Jardin</h3>
-                                <div className="space-y-4">
+                                <h3 className="text-2xl font-bold text-yellow-700 mb-4">Sede Jardín</h3>
+                                <div className="space-y-4 mb-6">
                                     <p className="flex items-start">
                                         <MapPinIcon className="w-6 h-6 mr-3 text-yellow-600 flex-shrink-0 mt-1" />
                                         <a href="https://maps.app.goo.gl/L8QGwbDY6jyBYQCB8" target="_blank" className="text-slate-700 hover:text-yellow-600 transition-colors">Av. Alemania y Mariana de Jesús</a>
@@ -66,12 +81,26 @@ const Contact = () => {
                                         <a href="mailto:ikids.kindergarden@gmail.com" className="text-slate-700 hover:text-yellow-600 transition-colors">ikids.kindergarden@gmail.com</a>
                                     </p>
                                 </div>
+                                
+                                {/* Mapa Sede Telégrafo */}
+                                <div className="rounded-2xl overflow-hidden shadow-lg h-64">
+                                    
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.796250767576!2d-78.49346242425754!3d-0.19057163541167907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91d59b38f136e453%3A0x96522f58eea1b66a!2zSUtJRFMgIkVsIEphcmTDrW4i!5e0!3m2!1ses!2sec!4v1755549921376!5m2!1ses!2sec"
+                                        width="100%"
+                                        height="100%"
+                                        style={{ border: 0 }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
                             </div>
                         </div>
                     </AnimatedSection>
 
                     {/* CTA Section */}
-                    <AnimatedSection className="lg:w-2/3" delay="duration-1000">
+                    <AnimatedSection className="lg:w-1/2" delay="duration-1000">
                         <div className="bg-white p-8 rounded-2xl shadow-lg h-full flex flex-col items-center justify-center text-center border border-yellow-200">
                             <div className="mb-8">
                                 <h2 className="text-3xl font-bold text-yellow-700 mb-4">¿Listo para comenzar?</h2>
