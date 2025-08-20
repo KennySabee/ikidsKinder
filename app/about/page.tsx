@@ -70,38 +70,32 @@ const About = () => {
                 Misión
               </h3>
               <p className="text-slate-700 text-justify">
-                Brindar una educación inicial de alta calidad en un ambiente
-                cálido y estimulante, promoviendo el desarrollo integral de cada
-                niño a través del juego, el afecto y la exploración.
+                Ofrecer una educación inicial de excelencia que fomente valores, hábitos y conocimientos, con un enfoque en el desarrollo social y emocional de los niños, siempre en un entorno de amor, respeto y confianza que se sienta como familia.
               </p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection delay="duration-1000">
             <div className="bg-white p-8 rounded-2xl h-full shadow-lg border border-yellow-200 hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
-              <div className="text-4xl mb-4 text-yellow-500">🚀</div>
+              <div className="text-4xl mb-4 text-yellow-500">✨</div>
               <h3 className="text-2xl font-bold text-yellow-700 mb-4">
-                Visión
+                 Visión
               </h3>
               <p className="text-slate-700 text-justify">
-                Ser la guardería líder en innovación pedagógica, reconocida por
-                formar niños felices, autónomos, creativos y con sólidos
-                valores, preparados para enfrentar los retos del mañana.
+                Ser el preescolar líder, formando a los niños con modelos educativos innovadores, en espacios seguros y con un equipo humano calificado, que acompañe con calidad y calidez cada etapa de su primera infancia.
+
               </p>
             </div>
           </AnimatedSection>
 
           <AnimatedSection delay="duration-[1300ms]">
             <div className="bg-white p-8 rounded-2xl h-full shadow-lg border border-yellow-200 hover:-translate-y-2 transition-all duration-300 hover:shadow-xl">
-              <div className="text-4xl mb-4 text-yellow-500">💖</div>
+              <div className="text-4xl mb-4 text-yellow-500">🌱 </div>
               <h3 className="text-2xl font-bold text-yellow-700 mb-4">
                 Filosofía
               </h3>
               <p className="text-slate-700 text-justify">
-                Creemos que cada niño es único. Nuestra filosofía se basa en el
-                respeto a sus ritmos, el fomento de su curiosidad innata y la
-                construcción de un aprendizaje significativo a través de
-                experiencias positivas.
+                En IKIDS creemos que la base del aprendizaje está en el amor, la seguridad y la disciplina positiva. Nuestro propósito es crecer junto a las familias, asegurando que cada niño se desarrolle de manera creativa, integral y feliz.
               </p>
             </div>
           </AnimatedSection>

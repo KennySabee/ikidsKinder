@@ -89,7 +89,7 @@ export const playAreas = [
   {
     name: "JUEGOS",
     description:
-      " Espacio acogedor que cultiva el hábito lector, estimula la imaginación y enriquece el lenguaje a través del contacto diario con los libros.",
+      "A través del juego libre y guiado, los niños estimulan su creatividad, fortalecen su confianza y aprenden a relacionarse, todo en un ambiente seguro y diseñado especialmente para ellos.",
     imageUrl: "/rincones/JUEGOS.jpg",
   },
 ];
@@ -98,13 +98,13 @@ export const services = [
   {
     title: "FULL TIME",
     description: "Horarios flexibles que se ajustan a tus necesitadades.",
-    features: ["Planes desde 7:30 am- 16:30pm", "Informes diarios"],
+    features: ["Planes desde 7:30 am- 18:30pm", "Informes diarios"],
     emoji: "⏰"
   },
   {
     title: "INSTALACIONES",
     description:
-      "Diseñadas para estimular el juego, la seguridad y el aprendizaje en rincón de IKIDS..",
+      "Diseñadas para estimular el juego, la seguridad y el aprendizaje en cada rincón de IKIDS.",
     emoji: "🏢"
   },
   {
@@ -125,10 +125,10 @@ export const services = [
       emoji: "📷"
   },
   {
-    title: "MEDICINA",
+    title: "CONTROLES MÉDICOS",
     description:
-      " Contamos con revisiones pediátricas periódicas para asegurar el bienestar integral de cada niño.",
-      emoji: "💊"
+      " Contamos con controles médicos y psicológicos periódicos para asegurar el bienestar integral de cada niño.",
+      emoji: "🩺"
   },
   
 ];
@@ -240,6 +240,18 @@ export const gallerySlidesSedeTelegrafo: GallerySlide[] = [
     alt: 'Instalaciones Sede Telégrafo 12',
     label: 'SEDE TELÉGRAFO'
   },
+  {
+    id: 13,
+    src: '/sedes/telegrafo/13.jpg',
+    alt: 'Instalaciones Sede Telégrafo 13',
+    label: 'SEDE TELÉGRAFO'
+  },
+  {
+    id: 14,
+    src: '/sedes/telegrafo/14.jpg',
+    alt: 'Instalaciones Sede Telégrafo 14',
+    label: 'SEDE TELÉGRAFO'
+  },
 ];
 
 export const gallerySlidesSedeJardin: GallerySlide[] = [
@@ -249,12 +261,15 @@ export const gallerySlidesSedeJardin: GallerySlide[] = [
     alt: 'Instalaciones Sede Jardin 1',
     label: 'SEDE JARDIN'
   },
-  {
-    id: 2,
-    src: '/sedes/jardin/2.jpg',
-    alt: 'Instalaciones Sede Jardin 2',
-    label: 'SEDE JARDIN'
-  },
+
+  /*
+{
+  id: 2,
+  src: '/sedes/jardin/2.jpg',
+  alt: 'Instalaciones Sede Jardin 2',
+  label: 'SEDE JARDIN'
+},
+*/
   {
     id: 3,
     src: '/sedes/jardin/3.jpg',

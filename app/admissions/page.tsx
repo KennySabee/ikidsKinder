@@ -17,6 +17,7 @@ const Admissions = () => {
         const formData = new FormData(form);
 
         try {
+            // Eliminé los espacios extra en la URL
             const response = await fetch('https://formspree.io/f/movlwqzo', {
                 method: 'POST',
                 body: formData,
@@ -40,23 +41,24 @@ const Admissions = () => {
     };
 
     return (
-        <div className="bg-yellow-50 py-16 md:py-24">
+        <div className="bg-yellow-50 py-16 md:py-24 relative">
             {/* Elementos decorativos de fondo */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-20 left-10 text-4xl text-yellow-200 opacity-50">
-          ⭐
-        </div>
-        <div className="absolute top-40 right-20 text-3xl text-yellow-300 opacity-40">
-          🌟
-        </div>
-        <div className="absolute bottom-40 left-20 text-5xl text-yellow-200 opacity-50">
-          ☀️
-        </div>
-        <div className="absolute bottom-20 right-10 text-4xl text-yellow-300 opacity-40">
-          🌻
-        </div>
-      </div>
-            <div className="container mx-auto px-6">
+            <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute top-20 left-10 text-4xl text-yellow-200 opacity-50">
+                    ⭐
+                </div>
+                <div className="absolute top-40 right-20 text-3xl text-yellow-300 opacity-40">
+                    🌟
+                </div>
+                <div className="absolute bottom-40 left-20 text-5xl text-yellow-200 opacity-50">
+                    ☀️
+                </div>
+                <div className="absolute bottom-20 right-10 text-4xl text-yellow-300 opacity-40">
+                    🌻
+                </div>
+            </div>
+            
+            <div className="container mx-auto px-6 relative z-10">
                 <AnimatedSection>
                     <h1 className="text-4xl md:text-5xl font-bold text-center text-yellow-700 mb-16">Proceso de Admisión</h1>
                 </AnimatedSection>
@@ -146,14 +148,18 @@ const Admissions = () => {
                                 </button>
                                 
                                 {submitStatus === 'success' && (
-                                    <p className="text-green-600 font-medium">
-                                        ¡Gracias! Hemos recibido tu solicitud. Te contactaremos pronto.
-                                    </p>
+                                    <div className="p-4 bg-green-50 rounded-lg">
+                                        <p className="text-green-600 font-medium">
+                                            ¡Gracias! Hemos recibido tu solicitud. Te contactaremos pronto.
+                                        </p>
+                                    </div>
                                 )}
                                 {submitStatus === 'error' && (
-                                    <p className="text-red-600 font-medium">
-                                        Ocurrió un error. Por favor intenta nuevamente.
-                                    </p>
+                                    <div className="p-4 bg-red-50 rounded-lg">
+                                        <p className="text-red-600 font-medium">
+                                            Ocurrió un error. Por favor intenta nuevamente.
+                                        </p>
+                                    </div>
                                 )}
                             </div>
                         </form>

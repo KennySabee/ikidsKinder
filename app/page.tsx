@@ -61,18 +61,18 @@ const Hero = () => (
         <div className="w-full md:w-1/2 lg:w-3/5 text-center md:text-left relative z-10">
           <AnimatedSection>
             <h1 className="text-6xl md:text-6xl lg:text-7xl font-bold text-amarillo-personalizado mb-6 leading-tight pt-16 text-center">
-                DONDE LA AVENTURA DE APRENDER COMIENZA
-               
-              
+              DONDE LA AVENTURA DE APRENDER COMIENZA
             </h1>
           </AnimatedSection>
 
           <AnimatedSection delay="duration-1000">
             <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl shadow-lg mb-8 border-l-4 border-yellow-400 transform hover:scale-[1.02] transition-transform duration-300">
               <p className="text-lg md:text-xl text-slate-700 text-justify">
-                Somos una Institución de educación pre-primaria, que se
-                encuentra encaminada en alcanzar la excelencia educativa,
-                brindando un entorno amigable y amoroso en el cuidado infantil.
+                Somos una Institución de educación pre-primaria encaminada en
+                aportar y cooperar de manera proactiva en la formación integral,
+                brindando un entorno amigable y amoroso en el cuidado infantil
+                en sus primeros años de vida académica desde los 3 meses a 5
+                años de edad.
               </p>
             </div>
           </AnimatedSection>
@@ -112,40 +112,48 @@ const Hero = () => (
   </div>
 );
 const Reviews = () => (
-    <section className="py-20 bg-gradient-to-br from-sky-50 to-yellow-50 relative overflow-hidden">
-        {/* Elementos decorativos */}
-        <div className="absolute top-10 left-10 w-24 h-24 bg-yellow-200 rounded-full opacity-20 blur-xl animate-bounce"></div>
-        <div className="absolute bottom-10 right-10 w-32 h-32 bg-yellow-300 rounded-full opacity-15 blur-xl animate-bounce" style={{ animationDelay: '1s' }}></div>
-        
-        <div className="container mx-auto px-6 relative z-10">
-            <AnimatedSection>
-                <h2 className="text-5xl md:text-7xl font-kidz text-center mb-12 text-amarillo-personalizado">LO QUE DICEN LOS PADRES </h2>
-            </AnimatedSection>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {reviews.slice(0, 3).map((review, index) => (
-                    <AnimatedSection key={index} delay={`duration-[${700 + index * 200}ms]`}>
-                        <a 
-                            href="https://www.google.com/maps/place/IKIDS+%22+El+Tel%C3%A9grafo%22/@-0.1728004,-78.4838518,17z/data=!4m8!3m7!1s0x91d59b241f8671fb:0x632048b48b9e3d93!8m2!3d-0.1728058!4d-78.4812769!9m1!1b1!16s%2Fg%2F11pw86y9yb?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="relative block h-80 md:h-96"
-                        >
-                            <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg transform transition-all duration-300 hover:shadow-xl md:hover:scale-105">
-                                <Image
-                                    src={`/testimonios/resena${index + 1}.png`}
-                                    alt={`Reseña de ${review.name}`}
-                                    fill
-                                    className="object-cover scale-125"
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
-                                />
-                            </div>
-                        </a>
-                    </AnimatedSection>
-                ))}
-            </div>
-        </div>
-    </section>
+  <section className="py-20 bg-gradient-to-br from-sky-50 to-yellow-50 relative overflow-hidden">
+    {/* Elementos decorativos */}
+    <div className="absolute top-10 left-10 w-24 h-24 bg-yellow-200 rounded-full opacity-20 blur-xl animate-bounce"></div>
+    <div
+      className="absolute bottom-10 right-10 w-32 h-32 bg-yellow-300 rounded-full opacity-15 blur-xl animate-bounce"
+      style={{ animationDelay: "1s" }}
+    ></div>
+
+    <div className="container mx-auto px-6 relative z-10">
+      <AnimatedSection>
+        <h2 className="text-5xl md:text-7xl font-kidz text-center mb-12 text-amarillo-personalizado">
+          LO QUE DICEN LOS PADRES{" "}
+        </h2>
+      </AnimatedSection>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {reviews.slice(0, 3).map((review, index) => (
+          <AnimatedSection
+            key={index}
+            delay={`duration-[${700 + index * 200}ms]`}
+          >
+            <a
+              href="https://www.google.com/maps/place/IKIDS+%22+El+Tel%C3%A9grafo%22/@-0.1728004,-78.4838518,17z/data=!4m8!3m7!1s0x91d59b241f8671fb:0x632048b48b9e3d93!8m2!3d-0.1728058!4d-78.4812769!9m1!1b1!16s%2Fg%2F11pw86y9yb?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative block h-80 md:h-96"
+            >
+              <div className="relative w-full h-full overflow-hidden rounded-2xl shadow-lg transform transition-all duration-300 hover:shadow-xl md:hover:scale-105">
+                <Image
+                  src={`/testimonios/resena${index + 1}.png`}
+                  alt={`Reseña de ${review.name}`}
+                  fill
+                  className="object-cover scale-125"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
+                />
+              </div>
+            </a>
+          </AnimatedSection>
+        ))}
+      </div>
+    </div>
+  </section>
 );
 
 const Courses = () => (
@@ -268,7 +276,7 @@ const PlayAreas = () => (
                   alt={area.name}
                   width={300}
                   height={200}
-                  className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  className={`w-full h-48 aspect-video object-cover object-center transform group-hover:scale-110 transition-transform duration-500`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
