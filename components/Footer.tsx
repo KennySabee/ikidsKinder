@@ -50,7 +50,7 @@ const socialLinks: SocialLink[] = [
 const contactInfo: ContactInfo[] = [
   { icon: <PhoneIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: '(+593) 995745004  ' },
   { icon: <MailIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: 'ikids.kindergarden@gmail.com' },
-  { icon: <MapPinIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: 'Av. Telegrafo y Últimas Noticias' },
+  { icon: <MapPinIcon className="w-5 h-5 mr-3 text-yellow-500" />, text: 'Av. Telégrafo y Últimas Noticias' },
 ];
 
 export const Footer = () => {
