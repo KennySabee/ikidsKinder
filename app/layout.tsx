@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from '@/components/Header';
 import { Footer} from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton'; // Asegúrate de importar el componente
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -31,6 +32,7 @@ export default function RootLayout({
         <Header />
         <main className="flex-grow pt-12">{children}</main>
         <Footer />
+        <WhatsAppButton /> {/* Añadimos el botón de WhatsApp aquí */}
       </body>
     </html>
   );
