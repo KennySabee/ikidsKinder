@@ -18,14 +18,18 @@ const Admissions = () => {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    // ✅ Convertir FormData a objeto JavaScript
+    const formDataObject = Object.fromEntries(formData.entries());
+
     try {
-      // TODO: Reemplaza TU_FORMSPARK_ID con el ID real de tu formulario en Formspark
+      // ✅ Usar fetch con Content-Type: application/json como indica la documentación
       const response = await fetch("https://submit-form.com/x9HPhhkoW", {
         method: "POST",
-        body: formData,
         headers: {
+          "Content-Type": "application/json",  // ✅ Encabezado requerido por Formspark
           Accept: "application/json",
         },
+        body: JSON.stringify(formDataObject),  // ✅ Convertir a JSON
       });
 
       if (response.ok) {
