@@ -13,6 +13,7 @@ const navLinks = [
   { name: 'Servicios', path: '/services' },
   { name: 'Admisiones', path: '/admissions' },
   { name: 'Contacto', path: '/contact' },
+  { name: 'Protección de Datos', path: '/proteccion-de-datos' },
 ]
 
 const Header: React.FC = () => {
